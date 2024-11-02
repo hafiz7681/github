@@ -1,0 +1,662 @@
+// bahasa-bahasa pemrograman
+berikut ini adalah bahasa-bahasa pemrograman:
+c, c++, c#, java, javascript, php, python, objective-c, ruby, visual-basic. agar lebih lengkap silahkan telusuri "List of programming languages" atau bisa copy link ini. https://en.wikipedia.org/wiki/List_of_programming_languages
+
+// Bahasa Pemrograman yang cocok untuk development :
+Web development : php, c, c++, java, python, ruby.
+Game development : c#, c, c++, java, python, ruby.
+Mobile app development : c#, c++, java.
+Data analysis : r, python, matlab.
+Embedded system programming : c, c++, python.
+atau kalian bisa telusuri di link ini http://carlcheo.com/startcoding
+
+// Client-side Web Development
+  Native Javascript / Vanilla Javascript
+  JQuery
+  AngularJS, React, Ember, Backbone, dll
+// Server-side Development
+  NodeJS
+  ExpressJS
+// Browser Extension / Add-on
+// Desktop Applications
+  Electron, AppJS
+// Mobile App Development
+  JQuery Mobile, Cordova / PhoneGap
+// IoT & Robotics
+  CyclonJS, Johnny-Five
+// JSON
+
+// tipe Data pada JavaScript
+number : 1,2,3,4,5,6,7,8,9, ...
+string : 'Sandhika', 'Galih', 'Nofa', ...
+boolean : true / False
+object :
+function :
+undefined :
+
+// operator pada JavaScript
+aritmatika
+penugasan
+perbandingan
+logika
+string
+kondisional
+typeof
+
+operator binary membutuhkan 2 operand
+contoh : operand1 operator operand2.
+operator unary hanya membutuhkan 1 operand
+contoh : operator operand, atau operand operator.
+operator ternary adalah operator yang membutuhkan 3 operand
+contoh : (kondisi) ? true : false
+
+// operator aritmatika
+penjumlahan : 1 + 1 = 2
+pengurangan : 2 - 1 = 1
+perkalian : 2 * 2 = 4
+pembagian : 10 / 2 = 5
+modulus : 10 % 3 = 1
+modulus atau disebut juga sisa bagi contoh 10 dibagi 3 lebih 1.
+operator aritmatika memiliki urutan yg disebut operator precedence
+contoh : (), *, /, +, -
+
+// operator penugasan / assigment
+ada beberapa operator penugasan yang biasa dipakai pada JavaScript
+contoh : =, +=, -=, *=, /=, %=
+jika menggunakan salah satu operator penugasan maka nilai yang ada di dalam variabel tidak akan di timpa tetapi akan di kalkulasi atau dengan kata lain di jumlahkan, contoh : var x = 10, lalu tambahkan x += 10 maka hasilnya adalah x = 20.
+
+contoh lain operator penugasan adalah : 
+x += y sama dengan x = x + y
+x -= y sama dengan x = x - y
+x *= y sama dengan x = x * y
+x /= y sama dengan x = x / y
+x %= y sama dengan x = x % y
+
+// operator perbandingan / comparison
+operator perbandingan atau yang biasa di sebut comparison
+contoh : ==, !=, ===, !==, >, <, >=, <=
+operator perbandingan ini akan menghasilkan sebuah nilai Boolean true or false.
+misalkan 5 == 5 akan menghasilkan nilai true, 10 == 5 akan menghasilkan nilai false,
+tetapi 5 !== 10 akan menghasilkan nilai true. == dan === akan menghasilkan nilai yang berbeda, operator dengan tiga sama dengan biasa di sebut dengan operator identitas, operator dengan tiga sama dengan lebih unggul karna dapat membanding strict. contoh : 10 == '10' akan di anggap sama (true), sedangkan jika menggunakan operator strict 10 === '10' akan dianggap berbeda (false).
+
+// operator logika / logical
+operator logika : && (and)
+                  || (or)
+                  !  (not)
+
+contoh syntax : x = 12
+                (x % 2 == 0) && (x > 10) maka hasilnya TRUE
+
+                x = 20
+                (x % 2 == 0) && (x < 10) maka hasilnya FALSE
+
+Perintah AND dengan salah satu pernyataan yang salah akan membuat kedua pernyataan tersebut menjadi false,
+tapi jika menggunakan OR meskipun salah satu pernyataan salah akan menghasilkan nilai true :
+                x = 20
+                (x % 2 == 0) || (x < 10) maka hasilnya TRUE
+
+                x = 21
+                (x % 2 == 0) || (x < 10) akan menghasilkan nilai FALSE
+
+ini karna kedua nilai pada operator logika (or) salah sehingga menghasilkan nilai false. dan yang ketiga (not), not berfungsi untuk membalikkan nilai true menjadi false, operator ini berfungsi untuk mengeluarkan data tersebut dari list, contoh :
+var x = 12
+!(x % 2 == 0) && (x > 10) maka hasilnya FALSE
+
+// operator penggabung string
+operator aritmatika (+) juga bisa untuk penggabung string, contoh : 'apple' + 'pen'
+dan bisa juga jika menggunakan variabel :
+
+var a = 'apple'
+var b = 'pen'
+a + b akan menghasilkan 'applepen', jika ingin ada spasi maka kita harus membuat string kosong :
+
+var a = 'Sandhika'
+var b = 'Galih'
+a + ' ' + b akan menghasilkan 'Sandhika Galih'.
+
+pada javascript jika kita menggunakan operator penggabung string sangat penting untuk memperhatikan urutan penjumalahan :
+10 + 10 + '10' = '2010', ini karna js menjumlahkan number terlebih dahulu barulah kemudian javascript membuat number tersebut kedalam bentuk string. tetapi :
+'10' + 10 + 10 = '101010', ini karna javascript tidak akan menjumlahkan number yang di ketikkan setelah string. jadi javascript akan menganggap number tersebut adalah bagian dari string bukan (integer).
+
+// operator typeof
+operator typeof adalah operator ternary untuk mengecek jenis operator apakah yang sedang user gunakan : angka, string, undefined, boolean, dll. operator typeof hanya membutuhkan satu operand : 
+typeof(true) = 'boolean'
+typeof(1,2,3,4) = 'number'
+typeof('10') = 'string'
+typeof(&) = 'undefined'
+
+// operator kondisional
+operator kondisional adalah operator ternary yang membutuhkan 3 operand. contoh :
+(kondisi) ? true : false
+jika kondisi yang user masukkan benar maka operator ternary akan mengembalikan nilai true tapi jika yang user masukkan salah maka operator ternary akan mengembalikan nilai false. user juga bisa mengubah tampilan true or false dengan kata lain, contoh :
+(x % 2 == 0) ? 'genap' : 'ganjil'
+jika pernyataan user benar maka javascript akan mengembalikan nilai genap tapi jika salah maka javascript akan mengembalikan nilai false (ganjil).
+
+// tipe data pada javascript
+string : string boleh di awali dengan petik dua atau pun petik satu tapi harus di akhiri sebagaimana tanda petik di mulai :
+"sandhika galih" = benar
+"sandhika gallih' = salah
+kedua tanda petik di atas sama sama di butuhkan, pada beberapa penulisan mengharuskan kita untuk membuat string dengan tanda petik dua, meskipun tanda petik satu lebih mudah karna tidak perlu menekan dua tombol sekaligus. contoh :
+"Hari ini adalah hari jum'at"
+'kami sedang mengadakan kegiatan "gerakan pungut sampah"'.
+tapi ada saat dimana kita akan membutuhkan tiga atau lima tanda petik yang sama, contoh :
+' "gerakan pungut sampah" dilaksanakan pada hari jum'at '
+yang akan terjadi ialah tulisan jum'at akan terpotong menjadi ( jum ) untuk mencegah hal tersebut javascript menyediakan escape character, escape character adalah simbol garis miring ( \ ) berhati-hatilah saat memilih garis miring ( \ or / ). contoh :
+' "gerakan pungut sampah" dilakukan pada hari jumat\'at '
+ini tidak akan membuat javascript erro lagi, escape character :
+\0 untuk karakter NULL
+\' untuk tanda petik satu
+\" untuk tanda petik dua
+\\ untuk garis miring
+\n untuk baris baru
+\t untuk tab
+\b untuk backspace
+\uXXXX untuk unicode / simbol
+
+beberapa unicode pada javascript :
+\u00A9
+\u00AE
+\u00B1
+\u00B5
+\u2122
+......
+
+untuk lebih lengkap silahkan cek link di bawah ini :
+https://en.wikipedia.org/wiki/List_of_Unicode_characters
+
+// Truthy and Falsy
+pada javascript angka juga menyimpan nilai truthy dan falsy, contoh :
+
+( truthy )          ( falsy )
+true                false
+non-zero number     0
+"string"            " "
+object              undefined
+arrays              null
+functions           NaN
+
+jika kita mencoba menggunakan console lalu mengetikkan Boolean(0), maka javascript akan mengembalikan nilai false. non-zero number adalah ketika kita memasukkan nilai selain angka 0, contoh : Boolean(-12) dan begitulah seterusnya...
+
+// variabel
+variabel atau biasa disebut dengan var di gunakan untuk menampung sebuah nilai seperti angka, huruf, dll. aturan pembuatan variabel, yaitu :
+tidak boleh menggunakan spasi ( nama saya )
+tidak boleh di dahului oleh angka ( 1angka )
+tidak boleh menggunakan keyword javascript sebagai variabel
+boleh diawali oleh huruf lalu angka ( huruf1 )
+boleh memisahkan kata menggunakan underscot ( seperti_ini )
+boleh menggunakan lambang dolar ( boleh$ )
+boleh juga seperti ini ( $_$ )
+disarankan meggunakan CamelCase ( iniBolehBanget )
+
+keyword & reserved word pada javascript :
+
+break case catch class const continue debugger default delete do else enum export extends false finally for function if implements import in instanceof interface let new null package private protected public return static super switch this throw true try typeof var void while with yield ...
+
+// shorthand
+shorthand berfungsi untuk memudahkan penulisan variabel pada javascript, caranya ialah dengan menggunakan satu kali pengetikan variabel lalu di pisahkan oleh tanda koma dan di akhiri oleh titik koma, contoh :
+
+var nama = 'Sandhika',
+    umur = 31,
+    lulus = true;
+
+ini akan mempermudah kalian saat membuat sebuah variabel.
+
+// menulis javascript
+bagi kalian yang sudah belajar html dan css maka ini akan sangat mudah, jika kalian ingin menulis javascript pada halaman html maka kalian hanya perlu mengetik syntax berikut di dalam tag body atau di dalam tag head atau di sebut juga secara (internal) :
+
+<script>
+  alert('hello world');
+</script>
+
+tapi kalian ingin menulis javasript di halaman yang terpisah (eksternal) :
+
+<script type="text/javascript" src="folderTujuan/namaFile">
+  alert('hello world');
+</script>
+
+tapi biasakan menyimpan tag script di dalam body.
+
+// konsole di browser
+jika sebelumnya kita biasa menulis sesuatu didalam konsole, kali ini kita akan menuliskan syntax javascript di code editor dan kemudian di tampilkan pada konsole dengan menggunakan fungsi console.log();
+jika pada javascript kalian mengalami error maka jangan panik karna error yang tidak di kenali oleh javascript akan di tampilkan pada konsole, lihat pada pojok kanan javascript, biasanya akan ada tulisan namaFile.js:2 ini artinya error ada pada baris kedua.
+
+// popup box
+popup box adalah sebuah jendela kecil yang akan menjadi alat untuk kita berinteraksi dengan user nantinya, popup box itu sendiri terbagi menjadi tiga jenis :
+
+alert
+popup box ini berfungsi untuk menampilkan satu interaksi pada user, ini karna popup box hanya akan menampilkan ok yang kemudian bisa di konfirmasi oleh user dan javascript akan mengembalikan nilai true saja.
+
+prompt
+prompt berfungsi untuk melakukan interaksi dengan user yang bisa menuliskan teks kedalam popup box dan memiliki dua pilihan yaitu ok atau cancel, jika user memilih ok maka javascript akan mengembalikan nilai true jika sebaliknya maka javascript akan mengembalikan nilai false.
+
+confirm
+confirm berfungsi untuk melakukan interaksi yang hampir sama dengan popup box prompt, yang membedakan hanya pada confirm. user tidak dapat memasukkan inputan berupa teks, karna confirm hanya menawarkan pilihan ok atau cancel. jika user memilih ok maka javascript akan mengembalikan nilai true dan jika sebaliknya maka javascript akan mengembalikan nilai false.
+
+// control flow
+control flow adalah alur kendali dari sebuah program, dalam pemograman ada yang namanya normal flow. yaitu apabila program kita memiliki lebih dari satu statement, maka statement tersebut akan di eksekusi dari atas ke bawah atau dari kiri ke kanan. contoh :
+
+alert('Halo');
+alert('nama');
+alert('saya');
+alert('Sandhika');
+alert('Galih');
+
+var angka = prompt('Masukkan angka :');
+alert('Angka yang anda masukkan adalah : ' + angka);
+
+control flow tidak selalu dari atas ke bawah, bisa juga menggunakan pengulangan dan pengkondisian. kita akan membahas tentang loop / pengulangan terlebih dahulu :
+
+pengulangan, loop / iteration :
+syntax pengulangan pada javascript ada banyak, tapi disini kita hanya akan membahas beberapa saja. salah satu syntax loop / pengulangannya ialah for, while, do while.
+
+pengkondisian / percabangan :
+pengkondisian sangat sering di gunakan, contohnya jika kita ingin membuat sebuah kondisi dimana ketika user memilih ok maka javascript akan mengembalikan nilai true lalu akan di lanjutkan dengan interaksi yang berbeda atau akan terus berulang ketika javascript mengembalikan nilai false. syntax untuk pengkondisian ada beberapa yaitu if, if.. else, if.. else if.. else, switch.
+
+// keyword while
+sebelum kita membahas pengulangan pada javascript, mari kita belajar menggunakan perintah sublime-text. jika kita ingin mengulang hal yang sama cukup tahan ctrl + shift + d
+syntax while ada pada halaman Control_Flow.js
+
+hati-hati jika menggunakan while karna jika nilai pada kondisi true maka javascript akan terus me-looping aksi tersebut terus menerus dan akan terus bertambah, kondisi ini disebut sebagai "infinite loop" / "looping forever".
+
+untuk syntax while seperti di bawah ini :
+
+nilai_awal
+
+while(kondisi) {
+  
+  aksi
+  increment+ / decrement-
+}
+
+contoh 2 dari syntax while :
+
+var nilaiAwal = 1;
+var nilaiAkhir = 10;
+
+while(nilaiAwal <= nilaiAkhir) {
+
+  console.log('hello world');
+  nilaiAwal = nilaiAwal + 1;
+}
+
+console.log('Selesai');
+
+// keyword for
+for hampir mirip while tapi for lebih complete dan pada for nilaiAwal, aksi, dan increment / decrement ada pada kurung aksi. ini sangat memudahkan karna tidak perlu menuliskan banyak variabel dan memanimalisir lupa untuk menulis increment atau decrement, untuk lebih jelas silahkan cek pada halaman JavaScript/java/angkot.js
+
+untuk syntax for ada di bawah ini :
+
+for(var nilaiAwal; kondisi; increment/decrement) {
+  
+  aksi
+
+}
+
+contoh syntax for kedua :
+
+for( var nilaiAwal = 1; nilaiAwal <= 10; nilaiAwal++ ) {
+  
+  console.log('Hello World ' + nilaiAwal + 'x');
+
+}
+
+// syntax if.. else
+
+kali ini kita akan belajar menggunakan syntax if.. else di dalam syntax for, berikut syntax if dan else :
+
+var angka = prompt('masukkan angka!');
+
+if(angka % 2 == 0) {
+  alert(angka + 'adalah bilangan GENAP');
+} else {
+  alert(angka + 'adalah bilangan GANJIL');
+}
+
+// syntax for.. if.. else :
+
+for ( nilaiAwal; aksi; increment/decrement ) {
+  
+  if ( kondisi ) {
+    aksi 1
+  } else {
+    aksi 2
+  }
+
+}
+
+jika if menghasilkan nilai true maka if akan menjalankan aksi_1, tapi jika if bernilai false maka else akan menjalankan aksi_2. for akan menjalankan aksi pengulangan yang di kendalikan oleh if dan else.
+
+// syntax for.. if.. else if.. else :
+kali ini kita akan mempelajari syntax dari pengulangan, jika, kecuali, dan lain. syntax tersebut ialah for (pengulangan), if (jika), else if(kecuali), dan else (lain) :
+
+for( variabel; kondisi; inc/dec ) {
+  
+  if( kondisi 1 ) {
+    aksi 1
+  } else if( kondisi 2 ) {
+    aksi 2
+  } else {
+    aksi 3
+  }
+
+}
+
+contoh syntax ke-dua :
+
+for( i = 1; i <= 10; i++ ) {
+  
+  if( i <= 6 ) {
+    console.log('very_good ' + i + 'x');
+  } else if( i == 8 ) {
+    console.log('not_bad ' + i + 'x');
+  } else {
+    console.log('very_bad ' + i + 'x');
+  }
+
+}
+
+// belajar menggunakan  operator identitas dan syntax switch :
+jika kalian meminta user menginput angka lewat prompt maka angka tersebut akan menjadi string jadi hati-hati jika source kode kalian memiliki operator identitas, kalian bisa menggunakan syntax parseInt agar input user menjadi integer. switch mirip-mirip dengan if.. else if.. else. yang membedakan adalah switch lebih simpel dan teratur jadi kita akan belajar syntax switch di bawah :
+
+switch( ekspresi ) {
+
+  case "nilai 1":
+    aksi 1
+  [break;]
+  case "nilai 2":
+    aksi 2
+  [break;]
+  case "nilai n":
+    aksi n
+  [break;]
+  default:
+    aksi default
+  [break;]
+
+}
+
+contoh syntax switch ke-2 :
+
+var item = prompt('masukkan nama makanan / minuman : \n (cth: nasi, daging, susu, hamburger, softdrink)');
+
+switch( item ) {
+  case 'nasi' :
+  case 'daging' :
+  case 'susu' :
+    alert('makanan / minuman SEHAT!');
+    break;
+  case 'hamburger' :
+  case 'softdrink' :
+    alert('makanan / minuman TIDAK SEHAT!');
+    break;
+  default :
+    alert('anda memasukkan nama makanan / minuman yang salah!');
+    break;
+}
+
+// pengkondisian dan pengulangan bersarang
+
+disini apa yang telah kita pelajari di materi sebelumnya akan kita ulang kembali dalam sebuah latihan seperti latihan di bawah ini hanya dengan menggunakan 1 jenis keyword yaitu for :
+
+latihan 1
+
+**********
+
+latihan 2
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+latihan 3
+
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+**********
+
+latihan 4
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+latihan 5
+
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+latihan 6
+
+**********
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+         
+latihan 7
+
+         *
+        **
+       ***
+      ****
+     *****
+    ******
+   *******
+  ********
+ *********
+**********
+         
+latihan 8 (and)
+
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+*******************
+ *****************
+  ***************
+   *************
+    ***********
+     *********
+      *******
+       *****
+        ***
+         *
+
+// membuat suit-jawa
+kali ini kita akan mencoba membuat sebuah aplikasi sederhana yang berfungsi untuk melatih pengkondisian dan percabangan seperti latihan telah kita kerjakan beberapa hari yang lalu, nah di sini kita akan mebuat suwit yang bisa di interaksi oleh player, contoh :
+jika player memilih gajah dan komputer memilih semut maka computer menang,
+jika player memilih semut dan komputer memilih orang maka computer menang,
+jika player memilih orang dan komputer memilih gajah maka computer menang,
+jika player memilih gajah dan komputer memilih gajah maka hasilnya seri.
+
+berikut ini konsepnya :
+1. menangkap pilihan player
+2. menangkap pilihan komputer dan membangkitkan bilangan random : var comp = Math.random();
+3. menentukan rules
+4. menampilkan hasilnya
+
+dan kalian juga bisa menambahkan pengulangan seperti while jadi ketika kalian mengajukan pertanyaan kepada user (mau coba lagi?) maka looping akan terus terjadi tetapi jika kalian memilih cancel maka akan muncul dialog (terima kasih telah bermain!).
+
+// function
+function adalah sebuah perintah yang di buat untuk mengkalkulasi nilai-nilai pada javascript, function di buat sesuai dengan kebutuhan development dan bisa di panggil kembali sesuai kebutuhan development dan disebut dengan user-defined function. ada juga function yang di buat oleh javascript.
+function yang di buat oleh javascript disebut built-in function.
+function untuk string : chartAt(), slice(), split(), toString(), toLowerCase(), toUpperCase(), ...
+function untuk matematika : sin(), cos(), tan(), random(), round(), floor(), ceil(), log(), ...
+
+function untuk string : https://www.w3schools.com/jsref/jsref_obj_string.asp
+function untuk math : https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+function di bagi 2 : function deklaration and function expression
+contoh function deklaration :
+
+function jumlahDuaBilangan(a,b) {
+
+    var total;
+    total = a + b;
+
+    return total;
+
+}
+
+contoh function expression :
+
+var jumlahDuaBilangan = function(a,b) {
+    
+    var total;
+    total = a + b;
+    
+    return total;
+    
+}
+
+cara memanggil function :
+
+alert(jumlahDuaBilangan(200,750));
+alert(jumlahDuaBilangan(1,2));
+alert(jumlahDuaBilangan(900,407));
+
+function yang baik adalah function yang specifik agar mudah menelusuri kesalahan dalam function yang telah kita buat (user_defined_function).
+ini juga memudahkan dalam penggunaan kembali function yang telah digunakan (repeat/reusability).
+
+parameter dan argumen :
+parameter adalah variabel untuk sebuah fungsi saat function di buat parameter ada di dalam tanda kurung dan boleh ada atau tidak.
+argumen ialah sebuah nilai yang di masukkan pada kurung saat pemanggilan fungsi, agar lebih mudah kalian bisa menyimpan argumen pada sebuah variabel baru dan memanggil variabel baru untuk di cetak pada console atau popup_box.
+tapi jika argumen kalian banyak maka kalian juga harus menambah parameter dan itu agak rumit, jadi kalian bisa menggunakan keyword arguments.length untuk menampung semua argumen kalian tanpa harus menambah parameter (kosongkan parameter).
+cara membuat function yang baik adalah dengan membuat function yang singkat, dan mudah saat membaca source code tanpa merubah fungsionalitas dari sebuah function, kalian bisa melihat contohnya di Java/function.js tentang function yang baik.
+// scope
+scope atau ruang lingkup variable akan sangat berpengaruh pada source code karna itu penting untuk memerhatikan letak variable dan name conflik, kita bisa menggunakan nilai yang ada pada global scope tapi tak bisa menggunakan variable yang ada pada local scope. "use strict"
+
+// rekursif
+rekursif adalah pemanggilan function secara berulang-ulang mirip dengan looping, saat memakai fungsi rekursif kalian harus menghentikan pengulangan dengan cara memakai pengkondisian. misalnya di mulai dengan angka 10 dan jika parameter = 0; maka fungsi akan berhenti.
+
+contoh menggunakan for :
+function faktorial(n) {
+    var angka = 1;
+    for( var i = n; i > 0; i-- ) {
+        angka *= i;
+    }
+    return angka;
+} console.log(faktorial(5));
+
+ angka 1 * 5 = 5;
+ angka2 5 * 4 = 20;
+ angka3 20 * 3 = 60;
+ angka4 60 * 2 = 120;
+ angka5 120 * 1 = 120;
+ itulah penyebab 120 memiliki dua nilai karna nilai yang ada dalam variable angka menyimpan perubahan nilai, dari awalnya var angka = 1; menjadi var angka2 = 5, lalu 5 * (i=4) dan seterusnya.
+ sedangkan jika kita mengubah var angka = 2, maka 2 akan dikalikan 5 yang menghasilkan nilai 10. dan var baru yaitu angka2 menyimpan nilai 10 * 4 = 40, dan seterusnya.
+
+contoh menggunakan function :
+function faktorial(n) {
+    if( n === 0 ) return 1;
+    return n * faktorial(n-1);
+} console.log(faktorial(5));
+
+return 1, akan masuk pada return n = 1.
+
+// array
+array adalah "susunan sistematis dari objek-objek yang serupa" https://en.wikipedia.org/wiki/Array
+
+array dalam pemrograman "tipe data yang digunakan untuk mendeskripsikan kumpulan elemen (nilai atau variable), yang tiap-tiap elemennya memiliki index." https://en.wikipedia.org/wiki/Array_data_type
+
+menurut saya "array adalah sebuah variabel yang dapat menampung banyak nilai meski hanya memiliki satu variable dan dengan nama yang sama". contoh :
+
+var hari = ['senin', 'selasa', 'rabu'];
+var nama = ['sandhika', 'galih', 'nofa'];
+
+kalian bisa mendeklarasikan array terlebih dahulu seperti pada pada Java/array.js tentang key and value. array pada javascript di mualai dari 0 dan bertipe object, jadi jika kita menuliskan console.log(nama[1]); maka hasilnya galih. setiap object pasti memiliki fungsi di dalamnya dan fungsi itu akan kita sebut method. kita juga menyimpan string, boolean, integer, function dan array-bercabang di dalam array, contoh :
+
+var myFunc = function() {
+    console.log('Hello World');
+}
+var myArr = ['Hello', false, 25, myFunc, [4,5,6, [1,2,3]]];
+console.log(myArr[4][3][2]);
+
+// Method pada Array
+1. join 
+join berfungsi sebagai penyambung antar kalimat, bisa berupa tanda koma atau character lainnya.
+2. push
+push berfungsi untuk menambahkan elemen baru pada akhir elemen. bisa satu, dua, atau lebih.
+
+3. pop
+pop berfungsi untuk menghilangkan elemen pada akhir elemen, yaitu kebalikan dari push.
+
+4. unshift
+unshift berfungsi untuk menambahkan elemen baru pada awal elemen. bisa satu, dua, atau lebih.
+
+5. shift
+shift berfungsi untuk menghilangkan elemen pada awal elemen, yaitu kebalikan dari unshfit.
+
+6. splice
+splice berfungsi untuk menambahkan elemen baru pada bagian tengah elemen. bisa di mulai dari index keberapa?, ingin di hapus berapa?, dan di tambahkan elemen baru apa?.
+
+7. slice
+slice berfungsi untuk mengiris elemen dan menambahkannya ke array baru, jika ingin menggunakan slice maka harus membuat sebuah variabel baru yang berisi array awal.
+
+8. forEach
+forEach berfungsi untuk melakukan pengulangan mirip seperti seperti for, tapi forEach lebih special karna forEach bisa melakukan pengulangan menggunakan function dan juga memiliki index.
+
+9. map
+map berfungsi untuk melakukan pengulangan mirip dengan forEach, tapi map lebih bagus karna dapat mengembalikan array dan fungsi-fungsi array, hal ini tidak akan berlaku pada forEach.
+
+10. sort
+sort berfungsi untuk mengurutkan elemen pada array, kalian juga bisa menambahkan function pada sort.
+
+11. filter
+filter berfungsi untuk menyaring elemen pada array dan akan mengembalikan nilai array.
+
+12. find
+find berfungsi untuk menemukan salah satu elemen pada array tapi tidak mengembalikan array. method tidak akan berfungsi jika nilai yang dikembalikan bukan array.
+
+note :
+untuk contohnya ada di Java/array.js tentang method pada array. untuk lebih lengkap silakan cek link berikut. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global Objects/Array
+
+// object
+object secara umum adalah "kumpulan nilai, yang memiliki nama, untuk link nya : https://www.w3schools.com/js/js_object_definition.asp
+
+saya tidak akan menjelaskan panjang lebar tentang object, karna kalian bisa lihat penjelasan tentang javaScript yang fullstack di 2 link berikut ini :
+
+link1 = https://roadmap.sh/
+link2 = https://bit.ly/roadmapwpu
+
+contoh penulisan syntax object ada Java/object.js
