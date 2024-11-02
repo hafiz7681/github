@@ -1,0 +1,71 @@
+@ perintah pada git :
+1. git add
+Perintah “git add” digunakan untuk menambahkan file dan perubahan file atau direktori ke staging area.
+
+2. git commit
+Perintah “git commit” digunakan untuk menyimpan history perubahan yang telah ditambahkan ke staging area ke dalam repository Git.
+
+3. git init
+Perintah git init biasa digunakan diawal ketika akan membuat project baru, dimana git init berfungsi untuk membuat repository git baru.
+
+4. git push
+Perintah “git push” digunakan untuk mengunggah commit ke repository di server. Setiap kali Anda melakukan perubahan pada kode sumber dan setelah membuat commit.
+
+5. git branch
+Perintah “git branch” digunakan untuk membuat, menampilkan, atau menghapus branch pada repository Git.
+
+6. git clone
+Perintah “git clone” digunakan untuk meng-clone (meng-copy) repository Git dari server ke lokal.
+
+7. git pull
+Perintah git pull digunakan untuk mengambil dan mengunduh konten dari remote repository dan memperbarui repositori lokal agar sesuai dengan remote repository.
+
+8. git status
+Perintah “git status” digunakan untuk menampilkan status dari file dan direktori dalam repository Git.
+
+9. git checkout
+Perintah git checkout digunakan untuk menukar cabang aktif dengan cabang yang dipilih.
+
+10. git merge
+Perintah “git merge” digunakan untuk menggabungkan dua branch yang berbeda menjadi satu.
+
+11. git remote
+Perintah git remote akan membuat user terhubung ke remote repository.
+
+12. git log
+Perintah “git log” digunakan untuk menampilkan riwayat commit pada repository Git.
+
+13. git reset
+Perintah git reset digunakan untuk me-reset index dan bekerja dengan kondisi commit paling baru,
+
+14. git diff
+Perintah git diff digunakan untuk menampilkan conflicts. Untuk melihat conflicts dengan file dasar, gunakan: git diff --base <nama-file>.
+
+15. git fetch
+Perintah ini digunakan untuk menampilkan semua object dari remote repository yang tidak berada di direktori kerja lokal.
+
+16. git tag
+Perintah git tag di gunakan untuk menangkap titik dalam riwayat yang digunakan untuk rilis versi yang ditandai (misalnya v1.0.1). Tag seperti cabang yang tidak berubah.
+
+17. git rm
+Perintah git rm dig0unakan untuk menghapus file dari index dan direktori kerja.
+
+18. git show
+Perintah git show digunakan untuk menampilkan informasi tentang object pada git.
+
+19. git config --list
+Perintah git config digunakan untuk menampilkan atau mengkonfigurasi user.name dan user.email pada repository git.
+
+20. git remote remove <remote_name>
+Perintah ini di gunakan untuk menghapus remote yang ada di repository git.
+
+21. .gitignore
+Ini adalah sebuah file yang bisa menampung semua folder atau file yang tidak ingin di commit ke github, saat user mengetikkan git add . maka semua file akan di tambahlan ke staging area.
+
+30. Membuat repository baru diterminal & github :
+        1. mkdir root
+        2. git init
+        3. git commit -m "first commit"
+        4. git branch -M main
+        5. git remote add Github <https>
+        6. git push -u origin main
