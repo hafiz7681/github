@@ -70,3 +70,5 @@ Ini adalah sebuah file yang bisa menampung semua folder atau file yang tidak ing
 	5. git branch -M Git
 	6. git remote add Github <https>
 	7. git push -u Github Git
+
+31.
