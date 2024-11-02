@@ -63,12 +63,9 @@ Perintah ini di gunakan untuk menghapus remote yang ada di repository git.
 Ini adalah sebuah file yang bisa menampung semua folder atau file yang tidak ingin di commit ke github, saat user mengetikkan git add . maka semua file akan di tambahlan ke staging area.
 
 30. Membuat repository baru diterminal & github :
-	1. mkdir folder
+	1. mkdir root
 	2. git init
-	3. echo "# folder" >> readme.md
-	4. git commit -m "first commit"
-	5. git branch -M Git
-	6. git remote add Github <https>
-	7. git push -u Github Git
-
-31.
+	3. git commit -m "first commit"
+	4. git branch -M main
+	5. git remote add Github <https>
+	6. git push -u origin main
