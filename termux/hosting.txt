@@ -1,0 +1,68 @@
+# update & upgrade & repo
+pkg update && pkg upgrade | root-repo x11-repo
+# code-editor
+pkg install nano (vim) emacs ...
+# web browser
+pkg install (w3m) lynx elinks link ...
+# web server
+pkg install apache2 php-apache wget
+# data-base
+pkg install mariadb php | python python2 python3
+# package for assistant
+pkg install curl grep htop neofetch unzip zip git
+
+# Proces Hosting
+pkg install php-apache mariadb wget zip
+mariadbd
+buat session baru
+mariadb -u root
+        show databases;
+        use mysql;
+        set password for root@localhost = password('hafiz7681');
+        flush privileges;
+        exit;
+
+mkdir htdocs && cd htdocs
+nano -l $PREFIX/etc/apache2/httpd.conf
+        line53 + ServerName localhost
+        line66 = enable( mpm_prefork.so )
+        newline 67 = LoadModule php_module libexec/apache2/libphp.so
+                <FilesMatch \.php$>
+                        SetHandler application/x-httpd-php
+                </FilesMatch>
+        line71 = disable( mpm_worker.so )
+        line 283 + index.php
+        line249,line250 += files/home/htdocs
+        save and exit
+
+nano -l index.php
+        <?php phpinfo(); ?>
+        save and exit
+
+apachectl start
+        peramban & ketikkan localhost:8080
+        jika work maka lanjutkan search phpmyadmin
+        tahan pada tombol Download, salin url
+        wget .....paste-url.....zip
+        unzip explanation.zip -d .
+        ganti nama folder jadi phpmyadmin
+        cd phpmyadmin, cp config.sample.inc.php config.inc.php
+
+nano -l config.inc.php
+        cari blowfish phpmyadmin
+        copy dan paste di line16 di tanda quote
+        line30 = ganti host '127.0.0.1';
+        save dan exit
+
+buka chrome dan ketikkan localhost:8080/phpmyadmin
+        pilih situs desktop pada setelan chrome
+        user = root
+        password = masukkan sandi yang anda buat
+        pada mariadb -u root, dan login
+
+troubleshoot
+        jika localhost menampilkan "situs ini tidak
+        dapat di jangkau", ulangi apachectl start.
+
+        jika Gagal masuk MySQL server maka jalankan
+        ulang mariadb, silahkan login ulang.

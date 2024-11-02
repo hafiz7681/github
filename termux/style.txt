@@ -1,0 +1,18 @@
+nano .bashrc
+	kamu bisa menuliskan clear
+	dan menambahkan text, echo 'Contoh text';
+
+nano -l $PREFIX/files/usr/etc/bash.bashrc
+	kamu bisa ubah prompt termux dengan paste
+	yang di bawah ini dan ganti PS1.
+
+#### Prompt ####
+sym="㉿" #symbol of prompt
+bar_cr="34" #color of bars
+name_cr="37" #color of user & host
+end_cr="37" #color of prompt end
+dir_cr="" #color of current directory
+user_name="" #input name of user
+
+PS1='\n\[\033[0;${bar_cr}m\]┌──(\[\033[1;${name_cr}m\]${user_name}${sym}\h\[\033[0;${bar_cr}m\])-[\[\033[0;${dir_cr}m\]\w\[\033[0;${bar_cr}m\]]
+\[\033[0;${bar_cr}m\]└─\[\033[1;${end_cr}m\]>>\[\033[0m\] '
