@@ -9,10 +9,10 @@ pkg install apache2 php-apache wget
 # data-base
 pkg install mariadb php | python python2 python3
 # package for assistant
-pkg install curl grep htop neofetch unzip zip git
+pkg install perl curl grep htop neofetch unzip zip git
 
 # Proces Hosting
-pkg install php-apache mariadb wget zip
+pkg install php-apache mariadb php apache2 perl wget zip
 mariadbd
 buat session baru
 mariadb -u root
