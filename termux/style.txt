@@ -1,0 +1,27 @@
+pkg install
+~~~~~~~~~~~~~~~~~~~~~
+figlet neovim wget git zip unzip htop tsu neofetch
+php perl -y
+
+
+file: etc/bash.bashrc
+~~~~~~~~~~~~~~~~~~~~~
+clear
+printf '\e[0;31m'
+echo 'TERMUX' | figlet
+~~~~~~~~~~~~~~~~~~~~~
+name="hafiz"
+PS1='\[\e[0;31m\]${name}@\h:\[\e[0m\] \W\[\e[0m\] \[\e[0;31m\]\$\[\e[0m\] '
+
+
+file: files/home/.bashrc
+~~~~~~~~~~~~~~~~~~~~~
+alias c='clear'
+alias x='exit'
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='nvim'
+alias pkgup='pkg update && pkg upgrade'
+alias aptup='apt update && apt upgrade'
+alias start='termux-api-start'
