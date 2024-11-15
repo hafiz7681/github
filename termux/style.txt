@@ -24,4 +24,5 @@ alias la='ls -a'
 alias vi='nvim'
 alias pkgup='pkg update && pkg upgrade'
 alias aptup='apt update && apt upgrade'
-alias start='termux-api-start'
+alias start="cd $PREFIX/etc/init.d && ./mysql start && cd"
+alias stop="cd $PREFIX/etc/init.d && ./mysql stop && cd"
