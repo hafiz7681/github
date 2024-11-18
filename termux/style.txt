@@ -17,13 +17,14 @@ PS1='\[\e[0;31m\]${name}@\h:\[\e[0m\] \W\[\e[0m\] \[\e[0;31m\]\$\[\e[0m\] '
 
 file: files/home/.bashrc
 ~~~~~~~~~~~~~~~~~~~~~
-alias c='clear'
-alias x='exit'
-alias l='ls'
-alias ll='ls -l'
-alias la='ls -a'
-alias vi='nvim'
-alias pkgup='pkg update && pkg upgrade'
-alias aptup='apt update && apt upgrade'
-alias start="cd $PREFIX/etc/init.d && ./mysql start && cd"
-alias stop="cd $PREFIX/etc/init.d && ./mysql stop && cd"
+clear
+alias mysql-start="cd /data/data/com.termux/files/usr/etc/init.d && ./mysql start && cd"
+alias mysql-stop="cd /data/data/com.termux/files/usr/etc/init.d && ./mysql stop && cd"                    alias apache-start="apachectl start"
+alias c="clear"
+alias x="exit"
+alias sdcard="cd /storage/46B9-1402/"
+alias storage="cd /storage/emulated/0/"
+alias usb="cd /mnt/media_rw/1B62-19FF/"
+alias la="ls -a"
+alias ll="ls -lh"
+alias l="ls"
