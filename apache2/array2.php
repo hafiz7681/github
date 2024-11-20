@@ -1,3 +1,4 @@
+<!-- array biasa -->
 <?php
   $mahasiswa = [
     ["sandhika", "043040023", "teknik informatika", "sandhikagalih@unpas.ac.id"],
