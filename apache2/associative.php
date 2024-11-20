@@ -6,21 +6,21 @@
       "nrp"=>"043040023",
       "jurusan"=>"teknik informatika",
       "email"=>"sandhikagalih@unpas.ac.id",
-      "gambar"=>"aqua.jpg"
+      "gambar"=>"face1.jpg"
     ],
     [
       "nama"=>"doddy ferdiansyah",
       "nrp"=>"033040001",
       "jurusan"=>"teknik industri",
       "email"=>"doddy@yahoo.com",
-      "gambar"=>"keyboard.jpg"
+      "gambar"=>"face2.jpg"
     ],
     [
       "nama"=>"erik",
       "nrp"=>"023040123",
       "jurusan"=>"teknik planalogi",
       "email"=>"erik@gmail.com",
-      "gambar"=>"pulpen.jpg"
+      "gambar"=>"face3.jpg"
     ]
   ];
 ?>
