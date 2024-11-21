@@ -14,7 +14,7 @@
       <?php for($i = 1; $i <= 5; $i++) : ?>
         <?php if( $i % 2 == 1 ) : ?>
           <tr class="warna-baris">
-        <?php else : ?>
+          <?php else : ?>
           <tr>
         <?php endif ?>
           <?php for($j = 1; $j <= 5; $j++) : ?>
