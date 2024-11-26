@@ -1,23 +1,23 @@
 PowerShell (administrator) :
 1. wsl.exe --system -d Ubuntu df -h /mnt/wslg/distro
 2. wsl --update / wsl df -h /
+3. (Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | Where-Object { $_.GetValue("DistributionName") -eq 'Ubuntu' }).GetValue("BasePath") + "\ext4.vhdx"
 
 1. wsl.exe --shutdown
 2. diskpart
-3. (Get-ChildItem -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Lxss | Where-Object { $_.GetValue("DistributionName") -eq '<distribution-name>' }).GetValue("BasePath") + "\ext4.vhdx"
-4. Select vdisk file="jalur directory ext4.vhdx"
-5. detail vdisk
-6. expand vdisk maximum=2048000
-7. exit
-8. wsl.exe -l -v
+3. Select vdisk file="jalur directory ext4.vhdx"
+4. detail vdisk
+5. expand vdisk maximum=2048000
+6. exit
+7. wsl.exe -l -v
 
 Bash (administrator) :
 1. sudo mount -t devtmpfs none /dev
 2. mount | grep ext4
 	Dalam contoh berikut, nilai X adalah b:
 3. sudo resize2fs /dev/sdb 2048000M
-	jika work akan terlihat seperti:
 
+	jika work akan terlihat seperti:
 	resize2fs 1.44.1 (24-Mar-2021)
 	Filesystem at /dev/sdb is mounted on /; on-line resizing required
 	old_desc_blocks = 32, new_desc_blocks = 38
