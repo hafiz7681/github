@@ -4,7 +4,7 @@
             "nama"=>"Aminul Hafiz",
             "umur"=>"17th",
             "alamat"=>"mns.tgk di gadong",
-            "gambar"=>"images.jpeg",
+            "gambar"=>"images1.jpeg",
             "nrp"=>"7681237681"
 
         ],
@@ -20,7 +20,7 @@
             "nama"=>"david",
             "umur"=>"19th",
             "alamat"=>"newyork",
-            "gambar"=>"images3.png",
+            "gambar"=>"images3.jpeg",
             "nrp"=>"2377681681"
 
         ]
