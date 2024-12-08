@@ -38,16 +38,24 @@ show tables;
 describe <table name>;
 
 // memasukkan nilai-nilai ke table <table name>
-insert into <table name> values ('', 'sandhika galih', '043040023', 'sandikagalih@unpas.ac.id', 'teknik informatika', 'sandhika.jpeg');
+insert into <table name> (nama, nrp, email, jurusan, gambar) values ('sandhika galih', '043040023', 'sandikagalih@unpas.ac.id', 'teknik informatika', 'sandhika.jpeg');
 
 // untuk melihat isi tabel
 select * from <table name>;
 select nama from <table name>;
 select nama, nrp from <table name>;
+select * from <table name> where nrp = '043040023';
 
-// ---
--------
+// mengganti data dalam tabel
+update <table name> set jurusan = 'teknik industri' where id = 2;
+update <table name> set jurusan = 'teknik mesin' where nrp = 043040023;
 
-// menghapus table di mysql
+// menghapus data dalam table
+delete from <table name> where id = 3;
+delete from <table name> where nrp = '043040023';
+
+// menghapus table
 drop table <table name>;
 
+// menghapus database
+drop database <database name>;
