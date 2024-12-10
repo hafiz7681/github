@@ -1,0 +1,7 @@
+$ sudo apt install trash-cli #instal package trash-cli
+$ trash-put #sampah file dan direktori.
+$ trash-empty #kosongkan tempat sampah.
+$ trash-list #daftar file yang dibuang.
+$ trash-restore #mengembalikan berkas yang dibuang ke tempat sampah.
+$ trash-rm #hapus file individual dari tempat sampah.
+
