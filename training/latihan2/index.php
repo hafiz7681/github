@@ -22,9 +22,10 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<th>Email</th>
 			<th>Jurusan</th>
 		</tr>
+		<?php $i = 1; ?>
 	<?php foreach($mahasiswa as $mhs) : ?>
 		<tr>
-			<td style="text-align: center;"><?= $mhs["ID"]; ?></td>
+			<td style="text-align: center;"><?= $i; ?></td>
 			<td>
 				<a href="">Ubah</a> |
 				<a href="">Hapus</a>
@@ -35,6 +36,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<td><?= $mhs["Email"]; ?></td>
 			<td><?= $mhs["Jurusan"];?></td>
 		</tr>
+		<?php $i++; ?>
 	<?php endforeach; ?>
 	</table>
 
