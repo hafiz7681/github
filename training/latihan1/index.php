@@ -1,9 +1,8 @@
 <?php
 // koneksi ke database
-$connect = mysqli_connect("localhost", "root", "hafiz7681", "phpdasar");
-// ambil data dari tabel mahasiswa / query data mahasiswa
-$table = mysqli_query($connect, "SELECT * FROM mahasiswa");
-
+$conn = mysqli_connect("localhost","root","hafiz7681","phpdasar");
+// query table mahasiswa
+$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +14,6 @@ $table = mysqli_query($connect, "SELECT * FROM mahasiswa");
 <body>
 
 	<h1>Daftar Mahasiswa</h1>
-
 	<table border="1px" cellpadding="10px" cellspacing="0px">
 		<tr>
 			<th>No.</th>
@@ -26,20 +24,18 @@ $table = mysqli_query($connect, "SELECT * FROM mahasiswa");
 			<th>Email</th>
 			<th>Jurusan</th>
 		</tr>
-	<?php $i = 1; ?>
-	<?php while($mhs = mysqli_fetch_object($table)) : ?>
+	<?php while( $row = mysqli_fetch_assoc($result) ) : ?>
 		<tr>
-			<td style="text-align: center;"><?= $i; ?></td>
+			<td>1</td>
 			<td>
 				<a href="">Ubah</a> |
 				<a href="">Hapus</a>
 			</td>
-			<td><img src="img/<?= $mhs->Gambar; ?>" width="50"></td>
-			<td><?= $mhs->NRP; ?></td>
-			<td><?= $mhs->Nama; ?></td>
-			<td><?= $mhs->Email; ?></td>
-			<td><?= $mhs->Jurusan; ?></td>
-			<?php $i++; ?>
+			<td><img width="50px" src="img/<?= $row["Gambar"]; ?>"></td>
+			<td><?= $row["NRP"]; ?></td>
+			<td><?= $row["Nama"]; ?></td>
+			<td><?= $row["Email"]; ?></td>
+			<td><?= $row["Jurusan"];?></td>
 		</tr>
 	<?php endwhile; ?>
 	</table>

@@ -36,7 +36,7 @@
   </head>
   <body>
     
-    <h1>daftar mahasiswa</h1>
+    <h1>Halaman Admin</h1>
     
     <?php foreach( $mahasiswa as $mhs ) : ?>
     <ul>
