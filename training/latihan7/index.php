@@ -1,5 +1,6 @@
 <?php
 	require 'functions.php';
+
 	$mahasiswa = query('SELECT * FROM mahasiswa');
 
 	if( isset($_POST['cari']) ) {
@@ -38,9 +39,9 @@
 			<td>
 				<a href="ubah.php?id=<?= $mhs['id']; ?>">Ubah</a> |
 				<a href="hapus.php?id=<?= $mhs['id']; ?>"
-					onclick="confirm('Hapus ?')">Hapus</a>
+					onclick="confirm('Hapus <?= $mhs['nama']; ?> ?')">Hapus</a>
 			</td>
-			<td><img src="<?= $mhs['gambar']; ?>" alt="ERROR"></td>
+			<td><img width="100px" src="img/<?= $mhs['gambar']; ?>" alt="ERROR"></td>
 			<td><?= $mhs['nama']; ?></td>
 			<td><?= $mhs['nrp']; ?></td>
 			<td><?= $mhs['email']; ?></td>
