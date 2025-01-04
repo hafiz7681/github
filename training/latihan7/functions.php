@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect('localhost','root','hafiz7681','myDataBase');
+	$conn = mysqli_connect('127.0.0.1','root','hafiz7681','myDataBase');
 
 	function query($data) {
 		global $conn;
@@ -25,7 +25,7 @@
 		}
 
 		$insert = "INSERT INTO mahasiswa VALUES (NULL,'$gambar','$nama','$nrp','$email','$jurusan')";
-		$result = mysqli_query($conn, $insert);
+		mysqli_query($conn, $insert);
 
 		return mysqli_affected_rows($conn);
 	}

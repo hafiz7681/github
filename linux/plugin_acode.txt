@@ -1,0 +1,11 @@
+path autocomplete.
+prettier.
+php language features.
+php prettier.
+lint.
+acode ayu.
+snippets.
+lorem ipsum & emmet pro.
+pinch 2 zoom smooth.
+jetbrains icon dark.
+auto rename tag.

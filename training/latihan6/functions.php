@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect('localhost','root','hafiz7681','myDataBase');
+	$conn = mysqli_connect('127.0.0.1','root','hafiz7681','myDataBase');
 
 	function query($data) {
 		global $conn;
