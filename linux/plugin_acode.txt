@@ -5,7 +5,6 @@ php prettier.
 lint.
 acode ayu.
 snippets.
-lorem ipsum & emmet pro.
-pinch 2 zoom smooth.
-jetbrains icon dark.
+pinch to zoom.
+better snippets.
 auto rename tag.
