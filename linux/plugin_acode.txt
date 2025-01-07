@@ -1,0 +1,10 @@
+path autocomplete.
+prettier.
+php language features.
+php prettier.
+lint.
+acode ayu.
+snippets.
+pinch to zoom.
+better snippets.
+auto rename tag.
