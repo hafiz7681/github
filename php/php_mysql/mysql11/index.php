@@ -6,7 +6,15 @@ if(!isset($_SESSION['login'])) {
 }
 
 require 'functions.php';
-$mahasiswa = query("select * from mahasiswa");
+$jumlahDataPerhalaman = 8;
+$jumlahData = count(query("select * from mahasiswa"));
+// round() : 1.4 = 1 or 1.5 = 2;
+// floor() : 1.9 = 1;
+// ceil() : 1.1 = 2;
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerhalaman);
+var_dump($jumlahHalaman);
+
+$mahasiswa = query("select * from mahasiswa limit 0, $jumlahDataPerhalaman");
 
 if(isset($_POST['submit'])) {
   
@@ -14,6 +22,10 @@ if(isset($_POST['submit'])) {
   
   $mahasiswa = query("select * from mahasiswa where nama like '%$text%' or nrp
   like '%$text%' or email like '$text' or jurusan like '$text'");
+  
+  if(count($mahasiswa) === 0) {
+    $error = true;
+  }
   
 }
 
@@ -25,6 +37,12 @@ if(isset($_POST['submit'])) {
     <style>
       #cari {
         margin-left: 15px;
+      }
+      .td {
+        font-style: italic;
+        color: red;
+        font-size: 15px;
+        text-align: center;
       }
     </style>
   </head>
@@ -46,6 +64,12 @@ if(isset($_POST['submit'])) {
         <th>Email</th>
         <th>Jurusan</th>
       </tr>
+      <?php if(isset($error)) : ?>
+      <tr>
+        <td class="td" colspan="7"><?= $_POST['text'] . " tidak ada dalam
+        database!"; ?></td>
+      </tr>
+      <?php endif; ?>
       <?php $i = 1; ?>
       <?php foreach($mahasiswa as $mhs) : ?>
       <tr>
