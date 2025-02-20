@@ -49,6 +49,7 @@
 <body>
 	<a href="logout.php">Logout</a>
 	<h1>Daftar Mahasiswa</h1>
+	<a href="tambah.php">Tambah Data Mahasiswa</a>
 	<form action="" method="post">
 		<input type="text" name="username" autocomplete="off">
 		<button type="submit" name="cari">Cari</button>
