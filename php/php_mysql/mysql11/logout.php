@@ -1,15 +1,12 @@
 <?php
-session_start();
+	session_start();
 
-$_SESSION = [];
-session_unset();
-session_destroy();
+	$_SESSION = [];
+	session_unset();
+	session_destroy();
 
-setcookie('i', '', time());
-setcookie('j', '', time());
+	setcookie('login', '', time());
+	setcookie('key', '', time());
 
-header('location: login.php');
-exit;
-
-
+	header('location: login.php');
 ?>
