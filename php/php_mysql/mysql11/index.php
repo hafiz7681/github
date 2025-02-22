@@ -53,18 +53,20 @@
 	<form action="" method="post">
 		<input type="text" name="username" autocomplete="off">
 		<button type="submit" name="cari">Cari</button>
-	</form><br>
-	<!-- previous halaman -->
-	<?php if( $halamanAktif > 0 ) : ?>
-		<a href="?hal=<?= $halamanAktif-1; ?>">&lt;</a>
-	<?php endif; ?>
-	<!-- pengulangan a href -->
-	<?php for( $i = 0; $i < $jumlahHalaman; $i++ ) : ?>
-		<a href="?hal=<?= $i; ?>">h<?= $i+1; ?></a>
-	<?php endfor; ?>
-	<!-- next halaman -->
-	<?php if( $halamanAktif < ($jumlahHalaman-1) ) : ?>
-		<a href="?hal=<?= $halamanAktif+1; ?>">&gt;</a>
+	</form>
+	<?php if( $jumlahData !== 0 ) : ?>
+		<!-- previous halaman -->
+		<?php if( $halamanAktif > 0 ) : ?>
+			<a href="?hal=<?= $halamanAktif-1; ?>">&lt;</a>
+		<?php endif; ?>
+		<!-- pengulangan a href -->
+		<?php for( $i = 0; $i < $jumlahHalaman; $i++ ) : ?>
+			<a href="?hal=<?= $i; ?>">h<?= $i+1; ?></a>
+		<?php endfor; ?>
+		<!-- next halaman -->
+		<?php if( $halamanAktif < ($jumlahHalaman-1) ) : ?>
+			<a href="?hal=<?= $halamanAktif+1; ?>">&gt;</a>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<table border="1px" cellpadding="10px" cellspacing="0px">
