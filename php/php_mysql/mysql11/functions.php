@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect('localhost', 'root', ' ', 'myDataBase');
+	$conn = mysqli_connect('localhost', 'root', 'admin123', 'database');
 
 	function query($conn, $data) {
 		$result = mysqli_query($conn, $data);
