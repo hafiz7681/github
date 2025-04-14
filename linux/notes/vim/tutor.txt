@@ -16,6 +16,25 @@ ctrl+d untuk scroll setengah halaman ke depan
 ctrl+u untuk scroll setengah halaman ke belakang
 gg untuk ke baris pertama
 shift+g untuk ke akhir baris
+shift+d untuk menghapus kalimat di satu baris
+dd untuk menghapus satu baris full
+dw hapus dr kursor ke awal kata berikutnya
+db hapus dr kursor ke awal kata
+de hapus dr kursor hingga akhir kata
+diw hapus kata tempat kursor berada
+d + arrow menghapus 1huruf sesuai arah
+y4j akan menyalin baris tempat kursor berada dan 4 baris dibawah kursor
+y4k akan menyalin baris tempat kursor berada dan 4 baris diatas kursor
+10dd / 10dj akan menghapus 10 baris kebawah dari kursor
+10dk akan menghapus 10 baris ke atas dr kursor
+10dh akan menghapus 10 baris ke kiri kursor
+10dl akan menghapus 10 baris ke kanan kursor
+o untuk insert + enter
+a untuk insert + e
+i untuk insert biasa
+s untuk insert + backspace
+wqa untuk simpan dan keluar dari beberapa file
+x untuk hapus satu huruf ke kiri
 
 untuk melakukan pencarian gunakan tanda :
 	/ (slash)
