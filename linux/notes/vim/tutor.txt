@@ -1,0 +1,50 @@
+"membuka file dari vim
+:edit namafile.txt
+
+"navigasi vim
+0 untuk ke awal kalimat
+$ untuk ke akhir kalimat
+b untuk ke huruf awal, kata <- sebelumnya
+w untuk ke huruf awal, kata -> berikutnya
+e untuk ke huruf akhir, kata -> berikutnya
+shift+l untuk ke akhir jendela
+shift+h untuk ke awal jendela
+shift+m untuk ke tengah jendela
+ctrl+f untuk scroll satu halaman kedepan
+ctrl+b untuk scroll satu halaman kebelakang
+ctrl+d untuk scroll setengah halaman ke depan
+ctrl+u untuk scroll setengah halaman ke belakang
+gg untuk ke baris pertama
+shift+g untuk ke akhir baris
+
+untuk melakukan pencarian gunakan tanda :
+	/ (slash)
+n untuk kata selanjutnya
+shift+n untuk kata sebelumnya
+
+untuk melakukan pencarian tanpa mengetikkan teks :
+letakkan kursor pada teks yang ingin dicari
+shift+* untuk cari kedepan
+shift+# untuk cari kebelakang
+
+untuk mencari dengan style :
+:set hlsearch
+warna dari hlsearch tidak akan hilang meski saat diketikkan
+
+untuk mencari dan mengganti text :
+:%s/text/change/g,gi,gc
+
+vim configuration :
+set number for number line
+set relativenumber for number line relative
+set cursorline for line off cursor
+set showmode for show mode now
+set visualbell for visual bell every change mode
+syntax on for high light syntax
+colorscheme <theme> for change theme in vim
+
+plugin manager :
+"PlugInstall - install the plugins
+"PlugUpdate - update the plugins
+"PlugDiff - review update the plugins
+"PlugClean - remove the plugins
