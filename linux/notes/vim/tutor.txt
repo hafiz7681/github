@@ -25,6 +25,8 @@ diw hapus kata tempat kursor berada
 d + arrow menghapus 1huruf sesuai arah
 y4j akan menyalin baris tempat kursor berada dan 4 baris dibawah kursor
 y4k akan menyalin baris tempat kursor berada dan 4 baris diatas kursor
+yy untuk menyalin baris saat ini + enter
+5yy untuk menyalin lima baris
 10dd / 10dj akan menghapus 10 baris kebawah dari kursor
 10dk akan menghapus 10 baris ke atas dr kursor
 10dh akan menghapus 10 baris ke kiri kursor
