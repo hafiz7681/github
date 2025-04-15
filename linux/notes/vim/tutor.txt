@@ -2,6 +2,10 @@
 :edit namafile.txt
 
 "navigasi vim
+j untuk ke bawah
+k untuk ke atas
+h untuk ke kiri
+l untuk ke kanan
 0 untuk ke awal kalimat
 $ untuk ke akhir kalimat
 b untuk ke huruf awal, kata <- sebelumnya
