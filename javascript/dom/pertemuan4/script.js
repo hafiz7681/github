@@ -1,50 +1,55 @@
-/* Manipulasi Elements */
+// Manipulasi Node
+// document.createElement()
+// document.createTextNode()
+// node.appendChild()
+// node.insertBefore()
+// parentNode.removeChild()
+// parentNode.replaceChild()
+// ...
 
-// element.innerHTML
-const sectionA = document.querySelector('section#a');
-sectionA.innerHTML = '<div id="c"><p>hello world</p></div>';
+// buat elements dan isi element
+const elementP = document.createElement('p');
+const textP = document.createTextNode('paragraf baru');
+// masukkan text ke tag p
+elementP.appendChild(textP);
 
-// element.style.<propertyCSS>
-const judul = document.querySelector('#judul');
-judul.style.color = 'lightblue';
-judul.style.backgroundColor = 'salmon';
+// simpan di akhir sectionA
+const sectionA = document.getElementById('a');
+sectionA.appendChild(elementP);
 
-// element.<property>Attribute()
-	// element.setAttribute()
-	const judul = document.querySelector('h1');
-	judul.setAttribute('name', 'judul');
 
-	// element.getAttribute()
-	const judul2 = document.querySelector('section#a a');
-	console.log(judul2.getAttribute('href'));
 
-	// element.removeAttribute()
-	const judul3 = document.querySelector('div#container section#a p:nth-child(1)');
-	judul3.removeAttribute('class');
 
-// element.classList.<property>()
-	// element.classList.add() -> menambahkan class
-	const p1 = document.querySelector('div#container section#a p.p2');
-	var p = p1.classList.add('paragraf2', 'sandhika', 'galih');
 
-	// element.classList.remove() -> menghapus class
-	const p2 = document.querySelector('div#container section#a p.p2');
-	p2.classList.remove('p2');
+// kali ini menggunakan node.insertBefore
+const elementLi = document.createElement('li');
+:w
+const textLi = document.createTextNode('item baru');
+elementLi.appendChild(textLi);
 
-	// element.classList.toggle() -> jika class ada maka akan dihapus dan sebaliknya
-	const p3 = document.querySelector('div#container section#a p.paragraf2');
-	console.log(p3.classList.toggle('paragraf2'));
-		// OR
-	console.log(p3.classList.toggle('p2'));
+const ul = document.querySelector('section#b ul');
+const li = ul.querySelector('li:nth-child(2)');
+ul.insertBefore(elementLi, li);
 
-	// element.classList.item() -> cek nama class menggunakan index(dari 0)
-	const p4 = document.querySelector('div#container section#a p.p2');
-	console.log(p4.classList.item(0));
 
-	// element.classList.contains() -> cek class sudah ada atau belum
-	const p5 = document.querySelector('div#container section#a p.p2');
-	console.log(p5.classList.contains('p2'));
 
-	// element.classList.replace() -> mengganti nama class
-	const p6 = document.querySelector('div#container section#a p.p2');
-	console.log(p6.classList.replace('p2', 'sandhika'));
+
+
+
+// parentNode.removeChild() menghapus
+const tagA = getElementsByTagName('a')[0];
+sectionA.removeChild(tagA);
+
+
+
+
+
+// parentNode.replaceChild() menimpa
+const sectionB = getElementById('b');
+const p4 = sectionB.querySelector('p');
+
+const tagP = document.createElement('p');
+const textP = document.createTextNode('paragraf baru');
+
+tagP.appendChild(textP);
+sectionB.replaceChild(tagP, p4);
