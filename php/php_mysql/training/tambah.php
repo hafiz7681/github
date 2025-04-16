@@ -2,43 +2,49 @@
 require 'functions.php';
 
 if(isset($_POST['submit'])) {
-	if(tambah($_POST) === 1) {
+	if(tambah($_POST)) {
 		header('location: index.php');
 	} else {
-		echo 'error'; die;
+		$error = true;
 	}
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Tambah</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>tambah data</title>
 	</head>
 	<body>
-		<h1>Tambah Data Mahasiswa</h1>
+		<h1>tambah mahasiswa</h1>
+		<?php if(isset($error)) : ?>
+			<p style="color: red; font-style: italic;">gagal menambahkan mahasiswa</p>
+		<?php endif; ?>
 		<form action="" method="post" accept-charset="utf-8">
 			<ul type="none">
 				<li>
-					<label for="nama">Nama :</label>
-					<input type="text" value="" name="nama" id="nama"/>
+					<label for="gambar">gambar :</label>
+					<input type="text" name="gambar" id="gambar"/>
 				</li>
 				<li>
-					<label for="nrp">NRP :</label>
-					<input type="text" value="" name="nrp" id="nrp"/>
+					<label for="nama">nama :</label>
+					<input type="text" name="nama" id="nama"/>
 				</li>
 				<li>
-					<label for="email">Email :</label>
-					<input type="text" value="" name="email" id="email"/>
+					<label for="nrp">nrp :</label>
+					<input type="text" name="nrp" id="nrp"/>
 				</li>
 				<li>
-					<label for="jurusan">Jurusan :</label>
-					<input type="text" value="" name="jurusan" id="jurusan"/>
+					<label for="email">email :</label>
+					<input type="text" name="email" id="email"/>
 				</li>
 				<li>
-					<button type="submit" name="submit">tambah data</button>
+					<label for="jrs">jurusan :</label>
+					<input type="text" name="jrs" id="jrs"/>
+				</li>
+				<li>
+					<button type="submit" name="submit">tambah</button>
 				</li>
 			</ul>
 		</form>

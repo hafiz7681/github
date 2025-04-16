@@ -3,38 +3,45 @@ $conn = mysqli_connect('localhost','root','admin123','database');
 
 function query($data) {
 	global $conn;
-	$result = mysqli_query($conn,$data);
+	$result = mysqli_query($conn, $data);
 	$rows = [];
 	while($row = mysqli_fetch_assoc($result)) {
 		$rows[] = $row;
 	}
-
 	return $rows;
 }
 
 function tambah($data) {
 	global $conn;
 
-	$nama = $data['nama'];
-	$nrp = $data['nrp'];
-	$email = $data['email'];
-	$jurusan = $data['jurusan'];
+	$gambar = htmlspecialchars($data['gambar']);
+	$nama = htmlspecialchars($data['nama']);
+	$nrp = htmlspecialchars($data['nrp']);
+	$email = htmlspecialchars($data['email']);
+	$jurusan = htmlspecialchars($data['jrs']);
 
-	$result = mysqli_query($conn,"insert into mahasiswa values(null,'img.png','$nama','$nrp','$email','$jurusan')");
+	mysqli_query($conn, "insert into mahasiswa values (null, '$gambar', '$nama', '$nrp', '$email', '$jurusan')");
 
 	return mysqli_affected_rows($conn);
 }
 
-function ubah($data) {
+function hapus($id) {
 	global $conn;
-	$id = $_GET['id'];
+	mysqli_query($conn, "delete from mahasiswa where id = $id");
 
-	$nama = $data['nama'];
-	$nrp = $data['nrp'];
-	$email = $data['email'];
-	$jurusan = $data['jurusan'];
+	return mysqli_affected_rows($conn);
+}
 
-	mysqli_query($conn,"update mahasiswa set nama = '$nama', nrp = '$nrp', email = '$email', jurusan = '$jurusan' where id = " . $id);
+function ubah($id, $data) {
+	global $conn;
+	
+	$gambar = htmlspecialchars($data['gambar']);
+	$nama = htmlspecialchars($data['nama']);
+	$nrp = htmlspecialchars($data['nrp']);
+	$email = htmlspecialchars($data['email']);
+	$jurusan = htmlspecialchars($data['jrs']);
+
+	mysqli_query($conn, "update mahasiswa set gambar='$gambar', nama='$nama', nrp='$nrp', email='$email', jurusan='$jurusan' where id = $id");
 
 	return mysqli_affected_rows($conn);
 }

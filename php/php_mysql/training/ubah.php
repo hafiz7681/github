@@ -2,47 +2,53 @@
 require 'functions.php';
 
 $id = $_GET['id'];
-$result = mysqli_query($conn, "select * from mahasiswa where id = $id");
-$row = mysqli_fetch_assoc($result);
-
 if(isset($_POST['submit'])) {
-	if(ubah($_POST) === 1) {
+	if(ubah($id, $_POST) === 1) {
 		header('location: index.php');
 	} else {
-		echo 'error'; die;
+		$error = true;
 	}
 }
 
+$result = mysqli_query($conn, "select * from mahasiswa where id = $id");
+$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Ubah</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>ubah data</title>
 	</head>
 	<body>
-		<h1>Ubah Data Mahasiswa</h1>
+		<h1>ubah mahasiswa</h1>
+		<?php if(isset($error)) : ?>
+			<p style="color: red; font-style: italic;">gagal mengubah mahasiswa</p>
+		<?php endif; ?>
 		<form action="" method="post" accept-charset="utf-8">
 			<ul type="none">
 				<li>
-					<label for="nama">Nama :</label>
-					<input type="text" value="<?= $row['nama']; ?>" name="nama" id="nama"/>
+					<label for="gambar">gambar :</label>
+					<input type="text" name="gambar" id="gambar" value="<?= $row['gambar']; ?>"/>
 				</li>
 				<li>
-					<label for="nrp">NRP :</label>
-					<input type="text" value="<?= $row['nrp']; ?>" name="nrp" id="nrp"/>
+					<label for="nama">nama :</label>
+					<input type="text" name="nama" id="nama" value="<?= $row['nama']; ?>"/>
 				</li>
 				<li>
-					<label for="email">Email :</label>
-					<input type="text" value="<?= $row['email']; ?>" name="email" id="email"/>
+					<label for="nrp">nrp :</label>
+					<input type="text" name="nrp" id="nrp" value="<?= $row['nrp']; ?>"/>
 				</li>
 				<li>
-					<label for="jrs">Jurusan :</label>
-					<input type="text" value="<?= $row['jurusan']; ?>" name="jurusan" id="jrs"/>
+					<label for="email">email :</label>
+					<input type="text" name="email" id="email" value="<?= $row['email']; ?>"/>
 				</li>
 				<li>
-					<button type="submit" name="submit">ubah data</button>
+					<label for="jrs">jurusan :</label>
+					<input type="text" name="jrs" id="jrs" value="<?= $row['jurusan']; ?>"/>
+				</li>
+				<li>
+					<button type="submit" name="submit">ubah</button>
 				</li>
 			</ul>
 		</form>
