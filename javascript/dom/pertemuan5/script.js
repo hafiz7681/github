@@ -30,6 +30,13 @@ p2.addEventListener('click', function() {
 
 
 
+const p1 = document.getElementsByTagName('p')[0];
+p1.addEventListener('mouseenter', function() {
+	p1.style.backgroundColor = 'lightgreen';
+})
+p1.addEventListener('mouseleave', function() {
+	p1.style.backgroundColor = 'white';
+})
 
 
 
