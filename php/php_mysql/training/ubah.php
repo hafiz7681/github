@@ -19,17 +19,28 @@ $row = mysqli_fetch_assoc($result);
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>ubah data</title>
+		<style>
+			img {
+				border: 1px solid black;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>ubah mahasiswa</h1>
 		<?php if(isset($error)) : ?>
 			<p style="color: red; font-style: italic;">gagal mengubah mahasiswa</p>
 		<?php endif; ?>
-		<form action="" method="post" accept-charset="utf-8">
+		<form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			<ul type="none">
 				<li>
+					<img src="img/<?= $row['gambar']; ?>" width="80px" alt="error"/>
+				</li>
+				<li>
 					<label for="gambar">gambar :</label>
-					<input type="text" name="gambar" id="gambar" value="<?= $row['gambar']; ?>"/>
+					<input type="file" name="gambar" id="gambar"/>
+				</li>
+				<li>
+					<input type="hidden" name="gambarlama" value="<?= $row['gambar']; ?>"/>
 				</li>
 				<li>
 					<label for="nama">nama :</label>

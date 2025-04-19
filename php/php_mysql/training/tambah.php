@@ -2,7 +2,7 @@
 require 'functions.php';
 
 if(isset($_POST['submit'])) {
-	if(tambah($_POST)) {
+	if(tambah($_POST) === 1) {
 		header('location: index.php');
 	} else {
 		$error = true;
@@ -21,11 +21,11 @@ if(isset($_POST['submit'])) {
 		<?php if(isset($error)) : ?>
 			<p style="color: red; font-style: italic;">gagal menambahkan mahasiswa</p>
 		<?php endif; ?>
-		<form action="" method="post" accept-charset="utf-8">
+		<form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			<ul type="none">
 				<li>
 					<label for="gambar">gambar :</label>
-					<input type="text" name="gambar" id="gambar"/>
+					<input type="file" name="gambar" id="gambar"/>
 				</li>
 				<li>
 					<label for="nama">nama :</label>

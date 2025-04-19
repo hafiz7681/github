@@ -2,6 +2,10 @@
 require 'functions.php';
 
 $rows = query('select * from mahasiswa');
+if(isset($_POST['search'])) {
+	$cari = $_POST['text'];
+	$rows = cari($cari);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,6 +17,10 @@ $rows = query('select * from mahasiswa');
 	<body>
 		<h1>daftar mahasiswa</h1>
 		<a href="tambah.php">tambah data mahasiswa</a>
+		<form action="" method="post" accept-charset="utf-8">
+			<input type="text" value="" name="text" placeholder="search..."/>
+			<button type="submit" name="search">cari</button>
+		</form>
 		<table border="1px" cellpadding="10px" cellspacing="0px">
 			<tr>
 				<th>no</th>
@@ -32,7 +40,7 @@ $rows = query('select * from mahasiswa');
 					<a onclick="return confirm('hapus?')" href="hapus.php?id=<?= $row['id']; ?>">hapus</a>
 				</td>
 				<td>
-					<img src="img/<?= $row['gambar']; ?>" alt="error"/>
+					<img width="80px" src="img/<?= $row['gambar']; ?>" alt="error"/>
 				</td>
 				<td><?= $row['nama']; ?></td>
 				<td><?= $row['nrp']; ?></td>
