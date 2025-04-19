@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Mewarnai</title>
+		<style>
+		    html, body {
+		        height: 100%;
+		    }
+		    body {
+		        text-align: center;
+		    }
+		    button {
+		        padding: 5px;
+		    }
+		    .text {
+		        background-color: lightblue;
+		    }
+		    .kotak {
+		        width: 25px;
+		        height: 25px;
+		        margin: 10px auto;
+		        border: 1px solid width;
+		    }
+		    .merah { background-color: red; }
+		    .hijau { background-color: green; }
+		    .biru { background-color: blue; }
+		</style>
+	</head>
+	<body class="text">
+		<h1>Bermain Dengan Warna</h1>
+		<button type="submit">tombol</button>
+		
+		<br /><br />
+		
+		<div class="kotak merah"></div>
+		<input type="range" name="sMerah" min="0" max="255" />
+		
+		<div class="kotak hijau"></div>
+		<input type="range" name="sHijau" min="0" max="255" />
+		
+		<div class="kotak biru"></div>
+		<input type="range" name="sBiru" min="0" max="255" />
+		
+		<script src="script.js"></script>
+	</body>
+</html>
