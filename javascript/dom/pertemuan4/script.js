@@ -7,49 +7,53 @@
 // parentNode.replaceChild()
 // ...
 
-// buat elements dan isi element
-const elementP = document.createElement('p');
-const textP = document.createTextNode('paragraf baru');
-// masukkan text ke tag p
-elementP.appendChild(textP);
+// createElement, createTextNode, appendChild
+const pBaru = document.createElement('p');
+const pText = document.createTextNode('paragraf baru');
 
-// simpan di akhir sectionA
-const sectionA = document.getElementById('a');
-sectionA.appendChild(elementP);
+// gabungkan createElement dan createTextNode
+pBaru.appendChild(pText);
 
-
-
+// simpan element yg sudah di rangkai di akhir sectionA
+const sectA = document.getElementById('a');
+sectA.appendChild(pBaru);
 
 
-// kali ini menggunakan node.insertBefore
-const elementLi = document.createElement('li');
-:w
-const textLi = document.createTextNode('item baru');
-elementLi.appendChild(textLi);
 
+// insertBefore
+const liBaru = document.createElement('li');
+const liText = document.createTextNode('item baru');
+
+// gabungkan seperti di atas
+liBaru.appendChild(liText);
+
+// simpan di bawah li pertama
 const ul = document.querySelector('section#b ul');
-const li = ul.querySelector('li:nth-child(2)');
-ul.insertBefore(elementLi, li);
+const li = ul.getElementsByTagName('li')[1];
+ul.insertBefore(liBaru, li);
 
 
 
 
-
-
-// parentNode.removeChild() menghapus
-const tagA = getElementsByTagName('a')[0];
-sectionA.removeChild(tagA);
-
+// removeChild
+const a = document.querySelector('a');
+sectA.removeChild(a);
 
 
 
 
-// parentNode.replaceChild() menimpa
-const sectionB = getElementById('b');
-const p4 = sectionB.querySelector('p');
+// replaceChild
+const sectB = document.querySelector('section#b');
+const p4 = sectB.getElementsByTagName('p')[0];
+const p2Baru = document.createElement('p');
+const p2Text = document.createTextNode('paragraf baru 2');
 
-const tagP = document.createElement('p');
-const textP = document.createTextNode('paragraf baru');
+p2Baru.appendChild(p2Text);
+sectB.replaceChild(p2Baru, p4);
 
-tagP.appendChild(textP);
-sectionB.replaceChild(tagP, p4);
+
+
+// element baru di tandai background hijau
+liBaru.style.backgroundColor = 'lightblue';
+pBaru.style.backgroundColor = 'lightblue';
+p2Baru.style.backgroundColor = 'lightblue';
