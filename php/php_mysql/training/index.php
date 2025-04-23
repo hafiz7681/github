@@ -1,5 +1,10 @@
 <?php
 require 'functions.php';
+session_start();
+if(!$_SESSION['login']) {
+	header('location: login.php');
+	return false; exit;
+}
 
 $rows = query('select * from mahasiswa');
 if(isset($_POST['search'])) {
@@ -15,6 +20,7 @@ if(isset($_POST['search'])) {
 		<title>daftar mahasiswa</title>
 	</head>
 	<body>
+		<a href="logout.php">logout</a>
 		<h1>daftar mahasiswa</h1>
 		<a href="tambah.php">tambah data mahasiswa</a>
 		<form action="" method="post" accept-charset="utf-8">
@@ -40,7 +46,7 @@ if(isset($_POST['search'])) {
 					<a onclick="return confirm('hapus?')" href="hapus.php?id=<?= $row['id']; ?>">hapus</a>
 				</td>
 				<td>
-					<img width="80px" src="img/<?= $row['gambar']; ?>" alt="error"/>
+					<img width="80px" src="img/<?= $row['gambar']; ?>" alt="not found"/>
 				</td>
 				<td><?= $row['nama']; ?></td>
 				<td><?= $row['nrp']; ?></td>

@@ -1,5 +1,10 @@
 <?php
 require 'functions.php';
+session_start();
+if(!$_SESSION['login']) {
+	header('location: login.php');
+	return false; exit;
+}
 
 $id = $_GET['id'];
 if(isset($_POST['submit'])) {
@@ -33,7 +38,7 @@ $row = mysqli_fetch_assoc($result);
 		<form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 			<ul type="none">
 				<li>
-					<img src="img/<?= $row['gambar']; ?>" width="80px" alt="error"/>
+					<img src="img/<?= $row['gambar']; ?>" width="80px"/>
 				</li>
 				<li>
 					<label for="gambar">gambar :</label>

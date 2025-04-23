@@ -95,4 +95,56 @@ function cari($data) {
 	return query($cari);
 }
 
+function signup($data) {
+	global $conn;
+
+	$username = htmlspecialchars(stripslashes(strtolower($data['username'])));
+	$password = mysqli_real_escape_string($conn, $data['password']);
+	$confirm = mysqli_real_escape_string($conn, $data['password2']);
+
+	if(strlen($username) < 5 || strlen($password) < 8) {
+		return false;
+	}
+
+	$result = mysqli_query($conn, "select username from users where username = '$username'");
+	if(mysqli_fetch_assoc($result)) {
+		return false;
+	}
+
+	if($password !== $confirm) {
+		return false;
+	}
+
+	$password = password_hash($password, PASSWORD_DEFAULT);
+	mysqli_query($conn, "insert into users values (null, '$username', '$password')");
+
+	return mysqli_affected_rows($conn);
+}
+
+function sigin($data) {
+	global $conn;
+	session_start();
+
+	$username = htmlspecialchars(stripslashes(strtolower($data['username'])));
+	$password = mysqli_real_escape_string($conn, $data['password']);
+
+	if(strlen($username) < 5 || strlen($password) < 8) {
+		return false;
+	}
+
+	$result = mysqli_query($conn, "select * from users where username = '$username'");
+	if(mysqli_num_rows($result) === 1) {
+		$row  = mysqli_fetch_assoc($result);
+		if(password_verify($password, $row['password']) === true) {
+			$_SESSION['login'] = true;
+			if($_POST['remember'] === "on") {
+				echo "<script>
+					alert('berhasil');
+				</script>";
+			}
+			return 1;
+		}
+	}
+}
+
 ?>
