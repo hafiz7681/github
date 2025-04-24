@@ -14,7 +14,7 @@ call plug#end()
 set cursorline
 set showmode
 syntax on"enable
-colorscheme monokai
+colorscheme onedark
 
 "nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -29,11 +29,10 @@ let NERDTreeQuitOnOpen=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
 
 "vim-airline-themes
 let g:airline_theme='onedark'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "auto-pairs
