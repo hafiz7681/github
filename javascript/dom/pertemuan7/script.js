@@ -13,33 +13,55 @@ function mecha(p, comp) {
     else return "pilihan anda salah";
 }
 
-const gajah = document.querySelector('img.gajah');
-const orang = document.querySelector('img.orang');
-const semut = document.querySelector('img.semut');
+const info = document.querySelector('div.info');
 const pComp = document.querySelector('img.img-komputer');
 pComp.setAttribute('src', 'img/tanya.png');
-const info = document.querySelector('div.info');
 
+
+/*
+const img = document.querySelectorAll('li img');
+img.forEach(function(player) {
+    player.addEventListener('click', function() {
+        const komp = comp();
+        pComp.setAttribute('src', 'img/' + komp + '.png');
+        info.innerHTML = mecha(player.className, komp);
+    });
+});
+*/
+
+// kita akan coba pakek for di bawah ini!
+var img = document.querySelectorAll('li img');
+var j = 0;
+for(var i = 0; i < img.length; i++) {
+    img[i].addEventListener('click', function() {
+        console.log(img[i].className);
+        const komp = comp();
+        pComp.setAttribute('src', 'img/' + komp + '.png');
+        console.log(img[j]);
+        info.innerHTML = mecha(img[j].className, komp);
+        j++;
+    });
+}
+
+/*
+const gajah = document.querySelector('img.gajah');
 gajah.addEventListener('click', function() {
-    let hasil = mecha("gajah", comp());
-    info.innerHTML = hasil;
-    if(hasil === "kalah") pComp.setAttribute('src', 'img/semut.png');
-    else if(hasil === "menang") pComp.setAttribute('src', 'img/orang.png');
-    else pComp.setAttribute('src', 'img/gajah.png');
+    const komp = comp();
+    pComp.setAttribute('src', 'img/' + komp + '.png');
+    info.innerHTML = mecha(gajah.className, komp);
 });
 
+const semut = document.querySelector('img.semut');
 semut.addEventListener('click', function() {
-    let hasil = mecha("semut", comp());
-    info.innerHTML = hasil;
-    if(hasil === "kalah") pComp.setAttribute('src', 'img/orang.png');
-    else if(hasil === "menang") pComp.setAttribute('src', 'img/gajah.png');
-    else pComp.setAttribute('src', 'img/semut.png');
+    const komp = comp();
+    pComp.setAttribute('src', 'img/' + komp + '.png');
+    info.innerHTML = mecha(semut.className, komp);
 });
 
+const orang = document.querySelector('img.orang');
 orang.addEventListener('click', function() {
-    let hasil = mecha("orang", comp());
-    info.innerHTML = hasil;
-    if(hasil === "kalah") pComp.setAttribute('src', 'img/gajah.png');
-    else if(hasil === "menang") pComp.setAttribute('src', 'img/semut.png');
-    else pComp.setAttribute('src', 'img/orang.png');
+    const komp = comp();
+    pComp.setAttribute('src', 'img/' + komp + '.png');
+    info.innerHTML = mecha(orang.className, komp);
 });
+*/
