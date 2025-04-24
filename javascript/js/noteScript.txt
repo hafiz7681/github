@@ -634,7 +634,7 @@ splice berfungsi untuk menambahkan elemen baru pada bagian tengah elemen. bisa d
 slice berfungsi untuk mengiris elemen dan menambahkannya ke array baru, jika ingin menggunakan slice maka harus membuat sebuah variabel baru yang berisi array awal.
 
 8. forEach
-forEach berfungsi untuk melakukan pengulangan mirip seperti seperti for, tapi forEach lebih special karna forEach bisa melakukan pengulangan menggunakan function dan juga memiliki index.
+forEach berfungsi untuk melakukan pengulangan mirip for, tapi forEach lebih special karna forEach bisa melakukan pengulangan menggunakan function dan juga memiliki index.
 
 9. map
 map berfungsi untuk melakukan pengulangan mirip dengan forEach, tapi map lebih bagus karna dapat mengembalikan array dan fungsi-fungsi array, hal ini tidak akan berlaku pada forEach.

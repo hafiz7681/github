@@ -54,7 +54,7 @@ for (var j = 0; j < arr.length; j++ ) {
     console.log('Mahasiswa ke-' + (j+1) + ' : ' + arr[j]);
 }
 
-// Method ada Array
+// Method pada Array
 // 1. join
 var arr = ['sandhika', 'galih', 'nofa', 'doddy'];
 
