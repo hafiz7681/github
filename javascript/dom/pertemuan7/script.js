@@ -10,7 +10,7 @@ function mecha(p, comp) {
     if(p === "gajah") return (comp === "orang") ? "menang" : "kalah";
     if(p === "orang") return (comp === "semut") ? "menang" : "kalah";
     if(p === "semut") return (comp === "gajah") ? "menang" : "kalah";
-    else return "pilihan anda salah";
+    else return "error";
 }
 
 const info = document.querySelector('div.info');
@@ -30,18 +30,16 @@ img.forEach(function(player) {
 */
 
 // kita akan coba pakek for di bawah ini!
-var img = document.querySelectorAll('li img');
-var j = 0;
-for(var i = 0; i < img.length; i++) {
+const img = document.querySelectorAll('li img');
+
+for(let i = 0; i < img.length; i++) {
     img[i].addEventListener('click', function() {
-        console.log(img[i].className);
-        const komp = comp();
-        pComp.setAttribute('src', 'img/' + komp + '.png');
-        console.log(img[j]);
-        info.innerHTML = mecha(img[j].className, komp);
-        j++;
+	let komp = comp();
+	pComp.setAttribute('src', 'img/' + komp + '.png');
+	info.innerHTML = mecha(img[i].className, komp);
     });
 }
+
 
 /*
 const gajah = document.querySelector('img.gajah');
