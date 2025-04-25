@@ -2,7 +2,7 @@
 require 'functions.php';
 
 session_start();
-if($_SESSION['login']) {
+if(!empty($_SESSION['login'])) {
 	header('location: index.php');
 	return false; exit;
 }
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
 	</head>
 	<body>
 		<h1>regristrasi mahasiswa</h1>
-		<?php if($error) : ?>
+		<?php if(isset($error)) : ?>
 			<p style="color: red; font-style: italic;">username / password kurang dari 8 karakter</p>
 		<?php endif; ?>
 		<form action="" method="post" accept-charset="utf-8">
