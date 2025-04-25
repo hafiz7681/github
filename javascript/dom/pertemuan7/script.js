@@ -13,10 +13,20 @@ function mecha(p, comp) {
     else return "error";
 }
 
+const img = document.querySelectorAll('li img');
 const info = document.querySelector('div.info');
 const pComp = document.querySelector('img.img-komputer');
 pComp.setAttribute('src', 'img/tanya.png');
 
+function putar() {
+    let i = 0;
+    const gambar = ['gajah','orang','semut'];
+    setInterval(function() {
+        pComp.setAttribute('src', 'img/' + gambar[i] + '.png');
+        if(i == (gambar.length -1)) i = 0;
+        i++;
+    }, 125);
+}
 
 /*
 const img = document.querySelectorAll('li img');
@@ -30,11 +40,9 @@ img.forEach(function(player) {
 */
 
 // kita akan coba pakek for di bawah ini!
-const img = document.querySelectorAll('li img');
-
 for(let i = 0; i < img.length; i++) {
     img[i].addEventListener('click', function() {
-	let komp = comp();
+	const komp = comp();
 	pComp.setAttribute('src', 'img/' + komp + '.png');
 	info.innerHTML = mecha(img[i].className, komp);
     });

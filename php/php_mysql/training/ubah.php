@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
 session_start();
-if(!$_SESSION['login']) {
+if(empty($_SESSION['login']) === true) {
 	header('location: login.php');
 	return false; exit;
 }

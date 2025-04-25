@@ -6,7 +6,7 @@ if(isset($_POST['signup'])) {
 }
 
 session_start();
-if($_SESSION['login']) {
+if(isset($_SESSION['login']) === true) {
 	header('location: index.php');
 	return false; exit;
 }
@@ -37,7 +37,7 @@ if(isset($_POST['sigin'])) {
 	</head>
 	<body>
 		<h1>silahkan login</h1>
-		<?php if($error) : ?>
+		<?php if(isset($error)) : ?>
 			<p style="font-style: italic; color: red;">username / password salah</p>
 		<?php endif; ?>
 		<form action="" method="post" accept-charset="utf-8">
