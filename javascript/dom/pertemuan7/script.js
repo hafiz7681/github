@@ -46,8 +46,8 @@ img.forEach(function(player) {
 // kita akan coba pakek for di bawah ini!
 for(let i = 0; i < img.length; i++) {
     img[i].addEventListener('click', function() {
+		let komp = comp();
 	    setTimeout(function() {
-	        let komp = comp();
 	        pComp.setAttribute('src', 'img/' + komp + '.png');
 	        info.innerHTML = mecha(img[i].className, komp);
 	    }, 101);
