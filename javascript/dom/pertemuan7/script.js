@@ -19,13 +19,17 @@ const pComp = document.querySelector('img.img-komputer');
 pComp.setAttribute('src', 'img/tanya.png');
 
 function putar() {
-    let i = 0;
-    const gambar = ['gajah','orang','semut'];
+const gambar = ['gajah','orang','semut'];
+let i = 0;
+const start = new Date().getTime();
     setInterval(function() {
+        if(new Date().getTime() - start > 1000) {
+            return clearInterval;
+        }
+        if(i == gambar.length) i = 0;
         pComp.setAttribute('src', 'img/' + gambar[i] + '.png');
-        if(i == (gambar.length -1)) i = 0;
         i++;
-    }, 125);
+    }, 100);
 }
 
 /*
@@ -42,9 +46,11 @@ img.forEach(function(player) {
 // kita akan coba pakek for di bawah ini!
 for(let i = 0; i < img.length; i++) {
     img[i].addEventListener('click', function() {
-	const komp = comp();
-	pComp.setAttribute('src', 'img/' + komp + '.png');
-	info.innerHTML = mecha(img[i].className, komp);
+	    setTimeout(function() {
+	        let komp = comp();
+	        pComp.setAttribute('src', 'img/' + komp + '.png');
+	        info.innerHTML = mecha(img[i].className, komp);
+	    }, 101);
     });
 }
 
