@@ -5,11 +5,21 @@ if(isset($_POST['signup'])) {
 	header('location: signup.php');
 }
 
+if(isset($_COOKIE['key']) && isset($_COOKIE['id'])) {
+	$id = $_COOKIE['id'];
+	$result = mysqli_query($conn, "select username from users where id = '$id'");
+	$row = mysqli_fetch_assoc($result);
+	if(password_verify($row['username'], $_COOKIE['name'])) {
+		$_SESSION['login'] = true;
+	}
+}
+
 session_start();
-if(isset($_SESSION['login']) === true) {
+if(!empty($_SESSION['login'])) {
 	header('location: index.php');
 	return false; exit;
 }
+
 
 if(isset($_POST['sigin'])) {
 	if(sigin($_POST) !== 1) {
