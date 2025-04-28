@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
-Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'preservim/nerdtree'
@@ -10,17 +10,18 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
-"set number
+set number
 set cursorline
 set showmode
 syntax on"enable
-colorscheme onedark
+set background=dark
+colorscheme tokyonight
 
 "nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-"nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 "let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 "let g:NERDTreeFileLines=1
@@ -29,12 +30,17 @@ let NERDTreeQuitOnOpen=1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 "vim-airline-themes
-let g:airline_theme='onedark'
+let g:airline_theme='tokyonight'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 "auto-pairs
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<c-b>'
+
+"tokyo night theme
+let g:tokyonight_style = 'storm' "night, storm
+let g:tokyonight_enable_italic = 0
