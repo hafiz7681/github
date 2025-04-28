@@ -5,6 +5,15 @@ if(isset($_POST['signup'])) {
 	header('location: signup.php');
 }
 
+if(isset($_COOKIE['key']) && isset($_COOKIE['id'])) {
+	$id = $_COOKIE['id'];
+	$result = mysqli_query($conn, "select username from users where id = '$id'");
+	$row = mysqli_fetch_assoc($result);
+	if(password_verify($row['username'], $_COOKIE['name'])) {
+		$_SESSION['login'] = true;
+	}
+}
+
 session_start();
 if(!empty($_SESSION['login'])) {
 	header('location: index.php');

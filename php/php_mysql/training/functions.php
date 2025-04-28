@@ -138,12 +138,10 @@ function sigin($data) {
 		if(password_verify($password, $row['password']) === true) {
 			$_SESSION['login'] = true;
 			if($_POST['remember'] === "on") {
-				$key = $row['id'];
-				$name = $row['username'];
-				$key_hash = password_hash($key, PASSWORD_DEFAULT);
+				$name = $row['username']; $id = $row['id'];
 				$name_hash = password_hash($name, PASSWORD_DEFAULT);
-				setcookie('key', $key_hash, time()+3600);
-				setcookie('id', $name_hash, time()+3600);
+				setcookie('key', $id, time()+10);
+				setcookie('id', $name_hash, time()+10);
 			}
 			return 1;
 		}
