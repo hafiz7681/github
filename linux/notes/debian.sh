@@ -5,12 +5,19 @@ packages=(
 	htop
 	vim
 	nano
+	php
+	root-repo
+	x11-repo
 	apache2
-	mariadb
-	ruby
+	phpmyadmin
+	python3
+	zip
+	unzip
+	neofetch
+	net-tools
 )
 
 for package in ${packages[@]}; do
 # package manager syntax
-	apt install ${package} -y
+	pkg install ${package} -y
 done
