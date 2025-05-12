@@ -17,7 +17,12 @@ packages=(
 	net-tools
 )
 
-for package in ${packages[@]}; do
-# package manager syntax
-	pkg install ${package} -y
-done
+read -p "download all [y/n] : " angka
+if ["$angka" == "y"]; then
+	for package in ${packages[@]}; do
+	# package manager syntax
+		pkg install ${package} -y
+	done
+elif ["$angka" == "n"]; then
+	exit;
+fi

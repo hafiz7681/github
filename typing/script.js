@@ -1,9 +1,13 @@
 var objek = [
-    ['f', 'j', 'd', 'k'],
-    ['s', 'l', 'a', ';'],
-    ['g', 'h', 't', 'y'],
-    ['v', 'm', 'b', 'n'],
-    ['c', ',', 'x', '.']
+    ['f', 'j', 'd', 'k'], // 1
+    ['s', 'l', 'a', ';'], // 2
+    ['g', 'h', 't', 'y'], // 3
+    ['v', 'm', 'b', 'n'], // 4
+    ['r', 'u', 'e', 'i'], // 5
+    ['w', 'o', 'q', 'p'], // 6
+    ['c', ',', 'x', '.'], // 7
+    ['z', '/', '\'', '\\'], // 8
+    ['`', '[', '-', ']'] // 9
 ];
 
 
@@ -11,7 +15,7 @@ var objek = [
 // input type='radio'
 function radio() {
     const myDiv = document.querySelector('div.radio');
-    for (var i = 0; i < 8; i++) {
+    for (var i = 0; i < objek.length; i++) {
         const element = document.createElement('input');
         element.setAttribute('type', 'radio');
         element.setAttribute('id', 'arr' + i);
