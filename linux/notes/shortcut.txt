@@ -1,0 +1,13 @@
+ctrl + a awal baris
+ctrl + e akhir baris
+ctrl + w hapus kata <=
+ctrl + k ?
+ctrl + l clear
+ctrl + c stop
+ctrl + d exit
+ctrl + s jeda
+ctrl + q lanjut
+ctrl + b mundur 1 kata
+ctrl + f maju 1 kata
+ctrl + r history
+ctrl + shift + v paste
