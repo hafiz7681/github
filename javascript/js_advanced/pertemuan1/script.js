@@ -1,6 +1,6 @@
 // Membuat Object pada JavaScript
 // 1. Object Literal
-let Mahasiswa1 = {
+let mahasiswa1 = {
 	nama: 'sandhika',
 	energi: 10,
 	makan: function(makan) {
@@ -13,7 +13,7 @@ let Mahasiswa1 = {
 	}
 }
 
-let Mahasiswa2 = {
+let mahasiswa2 = {
 	nama: 'doddy',
 	energi: 20,
 	makan: function(makan) {
@@ -28,7 +28,7 @@ let Mahasiswa2 = {
 
 
 // 2. Function Declaration
-function Mahasiswa(nama, energi) {
+/*function Mahasiswa(nama, energi) {
 	let mahasiswa = {};
 	mahasiswa.nama = nama;
 	mahasiswa.energi = energi;
@@ -42,5 +42,25 @@ function Mahasiswa(nama, energi) {
 }
 
 let sandhika = Mahasiswa('sandhika', 10);
-let doddy = Mahasiswa('doddy', 15);
->>>>>>> refs/remotes/origin/main
+let doddy = Mahasiswa('doddy', 15);*/
+
+
+// Constructor Function
+// keyword new
+function Mahasiswa(nama, energi) {
+	this.nama = nama;
+	this.energi = energi;
+
+	this.makan = function (porsi) {
+		this.energi += porsi;
+		console.log(`halo ${this.nama}, selamat makan!`);
+	}
+
+	this.main = function (jam) {
+		this.energi -= jam;
+		console.log(`halo ${this.nama}, selamat bermain!`);
+	}
+}
+
+let sandhika = new mahasiswa('sandhika', 10);
+let doddy = new mahasiswa('sandhika', 20);
