@@ -67,7 +67,7 @@ let doddy = new mahasiswa('sandhika', 20);*/
 
 
 // Function Declaration
-// object.create()
+// Object.create()
 const method = {
 	makan : function(porsi) {
 		this.energi = this.energi + porsi;
@@ -86,16 +86,12 @@ const method = {
 }
 
 function Mahasiswa(nama, energi) {
-	let mahasiswa = {};
+	let mahasiswa = Object.create(method);
 	mahasiswa.nama = nama;
 	mahasiswa.energi = energi;
-	mahasiswa.makan = method.makan;
-	mahasiswa.main = method.main;
-	mahasiswa.tidur = method.tidur;
 
 	return mahasiswa;
 }
 
 let sandhika = Mahasiswa('sandhika', 10);
 let doddy = Mahasiswa('doddy', 15);
-let erik = Mahasiswa('erik', 25);
