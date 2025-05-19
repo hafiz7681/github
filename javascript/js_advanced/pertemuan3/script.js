@@ -68,7 +68,7 @@ let doddy = new mahasiswa('sandhika', 20);*/
 
 // Function Declaration
 // Object.create() <- prototype
-const method = {
+/*const method = {
 	makan : function(porsi) {
 		this.energi = this.energi + porsi;
 		console.log(`Halo ${this.nama}, Selamat Makan!`);
@@ -94,4 +94,54 @@ function Mahasiswa(nama, energi) {
 }
 
 let sandhika = Mahasiswa('sandhika', 10);
-let doddy = Mahasiswa('doddy', 15);
+let doddy = Mahasiswa('doddy', 15);*/
+
+
+// Constructor Function
+// prototype
+function Mahasiswa(nama, energi) {
+	this.nama = nama;
+	this.energi = energi;
+
+	Mahasiswa.prototype.makan = function(porsi) {
+		this.energi += porsi;
+		console.log(`halo ${this.nama}, selamat makan!`);
+	}
+	Mahasiswa.prototype.main = function(jam) {
+		this.energi -= jam;
+		console.log(`halo ${this.nama}, selamat bermain!`);
+	}
+	Mahasiswa.prototype.tidur = function(jam) {
+		this.energi *= jam;
+		console.log(`halo ${this.nama}, selamat tidur!`);
+	}
+}
+
+let sandhika = new Mahasiswa('sandhika', 10);
+let doddy = new Mahasiswa('doddy', 15);
+
+
+// class
+/*
+class Mahasiswa {
+	constructor(nama, energi) {
+		this.nama = nama;
+		this.energi = energi;
+	}
+	
+	makan = function(porsi) {
+		this.energi += porsi;
+		console.log(`halo ${this.nama}, selamat makan!`);
+	}
+	main = function(jam) {
+		this.energi -= jam;
+		console.log(`halo ${this.nama}, selamat bermain!`);
+	}
+	tidur = function(jam) {
+		this.energi *= jam;
+		console.log(`halo ${this.nama}, selamat tidur!`);
+	}
+}
+
+let sandhika = new Mahasiswa('sandhika', 10);
+let doddy = new Mahasiswa('doddy', 15);*/
