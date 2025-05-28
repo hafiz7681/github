@@ -1,6 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -11,23 +9,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/vim-commentary'
 call plug#end()
 
-set number
-set relativenumber
+syntax on
 set cursorline
-set showmode
-set background=dark
-syntax enable
 set termguicolors
 
 "tokyonight-vim
-let g:tokyonight_style = 'night' "night, storm
-let g:tokyonight_enable_italic = 0
-let g:tokyonight_transparent_background = 0
-let g:tokyonight_disable_italic_comment = 1
-let g:tokyonight_menu_selection_background = 'blue' "green, red, blue
-let g:tokyonight_cursor = 'blue' "red, green, blue
-let g:tokyonight_current_word = 'grey background'
-"Available values: 'bold', 'underline', 'italic', 'grey background'
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+let g:tokyonight_disable_italic_comment = 0
 colorscheme tokyonight
 
 "nerdtree
@@ -35,9 +24,6 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-"let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-"let g:NERDTreeFileLines=1
 
 "ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"

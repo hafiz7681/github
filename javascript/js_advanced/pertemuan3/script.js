@@ -122,8 +122,7 @@ let doddy = new Mahasiswa('doddy', 15);
 
 
 // class
-/*
-class Mahasiswa {
+/*class Mahasiswa {
 	constructor(nama, energi) {
 		this.nama = nama;
 		this.energi = energi;
